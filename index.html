@@ -45,6 +45,11 @@
     .download { display:inline-block; padding:13px 22px; color:white; background:linear-gradient(135deg,var(--rose),var(--orange)); border-radius:999px; text-decoration:none; font-weight:bold; box-shadow:0 5px 12px rgba(201,91,103,.22); }
     .download:hover { transform:translateY(-1px); filter:saturate(1.1); }
     .small { font-size:.92rem; }
+    .doodle-strip { display:flex; align-items:center; justify-content:center; gap:clamp(18px,6vw,54px); margin:36px auto 0; padding:13px 24px; max-width:650px; color:var(--orange); background:#fff4ea; border:2px dashed #efc8b4; border-radius:999px; transform:rotate(-.7deg); }
+    .doodle-strip svg { width:43px; height:43px; fill:none; stroke:currentColor; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round; }
+    .doodle-strip svg:nth-child(2) { color:var(--rose); transform:rotate(6deg); }
+    .doodle-strip svg:nth-child(3) { color:#8eb87a; transform:rotate(-5deg); }
+    .doodle-strip svg:nth-child(4) { color:#d96b7c; transform:rotate(5deg); }
     footer { padding:30px 20px; text-align:center; color:#8a6258; font-size:.88rem; border-top:1px solid var(--line); }
     @media print { nav, .hero-video { display:none; } .hero { padding:25px; background:#fff; color:#000; } .teacher { color:#000; background:#fff; border:1px solid #999; } }
   </style>
@@ -69,6 +74,12 @@
       <p class="intro">「私の光」は、一人ひとりの心にある思いや願いに目を向ける曲です。曲を聴いたときに浮かんだ色、景色、気持ちを大切にしてみましょう。感じ方に正解はありません。</p>
       <div class="note">このページでは、歌詞や楽譜を掲載していません。授業でお使いの楽譜・音源とあわせてご利用ください。</div>
     </section>
+    <div class="doodle-strip" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 4v7M24 37v7M4 24h7M37 24h7M10 10l5 5M33 33l5 5M38 10l-5 5M15 33l-5 5"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M30 7v25.5a7 7 0 1 1-3-5.75V13l12-3v20.5a7 7 0 1 1-3-5.75V6z"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M7 32c9-18 25-18 34 0M10 36c8-12 20-12 28 0M14 40c6-7 14-7 20 0"/><path d="M8 27h.1M40 27h.1"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M24 40S7 30 7 17c0-8 10-11 17-3 7-8 17-5 17 3 0 13-17 23-17 23z"/></svg>
+    </div>
     <section id="listen" aria-labelledby="listen-title">
       <h2 id="listen-title">聴いてみよう</h2>
       <div class="cards">
@@ -94,6 +105,12 @@
         <article class="card"><h3>自分の光へ</h3><p>明るい時だけでなく、迷いや涙のある時にも見つけられる光。その思いが最後の表現につながります。</p></article>
       </div>
     </section>
+    <div class="doodle-strip" aria-hidden="true">
+      <svg viewBox="0 0 48 48"><path d="M15 37c0-13 5-24 16-28 0 13-5 24-16 28zM15 37c6-2 11-7 15-14"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M17 10c-8 5-8 23 7 29 15-6 15-24 7-29-3 5-11 5-14 0z"/><path d="M24 16v17M18 23h12"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M12 35c4-9 8-15 12-19 4 4 8 10 12 19"/><path d="M17 35h14M20 29h8"/></svg>
+      <svg viewBox="0 0 48 48"><path d="M15 29c0-9 5-17 9-20 4 3 9 11 9 20"/><path d="M10 37h28"/></svg>
+    </div>
     <section id="sing" aria-labelledby="sing-title">
       <h2 id="sing-title">表現しよう</h2>
       <div class="cards">
