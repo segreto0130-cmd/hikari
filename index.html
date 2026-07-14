@@ -6,45 +6,47 @@
   <meta name="description" content="『私の光』を聴き、感じ、表現するための学習ページです。">
   <title>私の光｜音楽の学びページ</title>
   <style>
-    :root { --ink:#203140; --blue:#0d6477; --sky:#eaf7f7; --sun:#f7c850; --paper:#fffdf7; --line:#d8e5e4; }
+    @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+    :root { --ink:#58453f; --rose:#d96b7c; --orange:#ef9657; --peach:#fff0e8; --cream:#fffaf4; --sun:#f5bd57; --line:#f0d5c8; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.8; }
-    a { color:var(--blue); }
-    .hero { position:relative; isolation:isolate; min-height:355px; display:grid; place-items:center; overflow:hidden; padding:76px 20px 58px; text-align:center; color:white; background:#0d6477; }
-    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(circle at 50% 5%,rgba(255,243,184,.65) 0 6%,transparent 25%),linear-gradient(135deg,rgba(7,72,87,.76),rgba(20,127,143,.68)); }
-    .hero-video { position:absolute; inset:0; z-index:-2; overflow:hidden; opacity:.33; pointer-events:none; }
+    body { margin:0; color:var(--ink); background:var(--cream); font-family:"Zen Maru Gothic","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.9; }
+    a { color:var(--rose); }
+    .hero { position:relative; isolation:isolate; min-height:370px; display:grid; place-items:center; overflow:hidden; padding:76px 20px 58px; text-align:center; color:white; background:var(--rose); }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(circle at 18% 12%,rgba(255,241,184,.75) 0 7%,transparent 27%),radial-gradient(circle at 86% 86%,rgba(255,175,111,.48) 0 10%,transparent 31%),linear-gradient(135deg,rgba(201,83,115,.58),rgba(235,132,80,.55)); }
+    .hero-video { position:absolute; inset:0; z-index:-2; overflow:hidden; opacity:.52; pointer-events:none; }
     .hero-video iframe { position:absolute; top:50%; left:50%; width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; border:0; transform:translate(-50%,-50%) scale(1.08); }
-    .hero-content { position:relative; }
-    .eyebrow { display:inline-block; padding:4px 14px; border:1px solid rgba(255,255,255,.6); border-radius:999px; font-size:.88rem; letter-spacing:.08em; }
+    .hero-content { position:relative; text-shadow:0 2px 16px rgba(103,50,43,.38); }
+    .eyebrow { display:inline-block; padding:5px 16px; border:1px solid rgba(255,255,255,.8); border-radius:999px; background:rgba(255,255,255,.17); font-size:.88rem; letter-spacing:.08em; }
     h1 { margin:14px 0 8px; font-size:clamp(2.3rem,7vw,4.5rem); letter-spacing:.12em; line-height:1.25; }
     .lead { max-width:630px; margin:0 auto; font-size:1.08rem; }
-    nav { position:sticky; top:0; z-index:2; display:flex; gap:4px; justify-content:center; flex-wrap:wrap; padding:10px; background:rgba(255,253,247,.95); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
-    nav a { padding:4px 10px; text-decoration:none; font-size:.92rem; }
+    nav { position:sticky; top:0; z-index:2; display:flex; gap:5px; justify-content:center; flex-wrap:wrap; padding:10px; background:rgba(255,250,244,.95); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
+    nav a { padding:5px 12px; color:var(--ink); text-decoration:none; font-size:.92rem; border-radius:999px; }
+    nav a:hover { color:white; background:var(--rose); }
     main { max-width:980px; padding:0 20px 60px; margin:auto; }
     section { padding:56px 0 4px; }
     h2 { font-size:clamp(1.55rem,4vw,2.2rem); line-height:1.4; margin:0 0 18px; }
-    h2::before { content:""; display:inline-block; width:12px; height:12px; margin-right:10px; border-radius:50%; background:var(--sun); }
+    h2::before { content:"✦"; display:inline-block; margin-right:10px; color:var(--orange); }
     .intro { max-width:720px; font-size:1.06rem; }
     .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
-    .card { padding:23px; background:white; border:1px solid var(--line); border-radius:16px; box-shadow:0 5px 16px rgba(13,100,119,.06); }
+    .card { padding:23px; background:#fff; border:1px solid var(--line); border-radius:22px; box-shadow:0 7px 18px rgba(165,95,74,.09); }
     .card h3 { margin:0 0 8px; font-size:1.12rem; }
-    .number { display:inline-grid; place-items:center; width:29px; height:29px; margin-right:6px; color:white; background:var(--blue); border-radius:50%; font-size:.85rem; }
-    .question { padding:24px; background:var(--sky); border-radius:16px; }
+    .number { display:inline-grid; place-items:center; width:29px; height:29px; margin-right:6px; color:white; background:var(--orange); border-radius:50%; font-size:.85rem; }
+    .question { padding:24px; background:var(--peach); border-radius:22px; }
     .question p { margin:.3em 0; }
-    .teacher { padding:28px; color:#fff; background:#254d61; border-radius:18px; }
+    .teacher { padding:30px; color:#fff; background:linear-gradient(135deg,#c96a77,#e58a5d); border-radius:24px; box-shadow:0 9px 20px rgba(173,92,77,.18); }
     .teacher h2 { margin-top:0; }
     .teacher h2::before { background:var(--sun); }
     .teacher a { color:#fff3b8; }
     details { margin:12px 0; padding:0 17px; color:var(--ink); background:white; border-radius:10px; }
     summary { padding:13px 2px; cursor:pointer; font-weight:bold; }
     details p, details ul { padding-bottom:12px; }
-    .note { padding:18px 20px; border-left:5px solid var(--sun); background:#fff7dc; }
-    .download { display:inline-block; padding:12px 20px; color:white; background:var(--blue); border-radius:999px; text-decoration:none; font-weight:bold; }
-    .download:hover { background:#084c5b; }
+    .note { padding:18px 20px; border-left:5px solid var(--orange); background:#fff1d6; border-radius:0 16px 16px 0; }
+    .download { display:inline-block; padding:13px 22px; color:white; background:linear-gradient(135deg,var(--rose),var(--orange)); border-radius:999px; text-decoration:none; font-weight:bold; box-shadow:0 5px 12px rgba(201,91,103,.22); }
+    .download:hover { transform:translateY(-1px); filter:saturate(1.1); }
     .small { font-size:.92rem; }
-    footer { padding:30px 20px; text-align:center; color:#48606b; font-size:.88rem; border-top:1px solid var(--line); }
-    @media print { nav { display:none; } .hero { padding:25px; background:#fff; color:#000; } .teacher { color:#000; background:#fff; border:1px solid #999; } }
+    footer { padding:30px 20px; text-align:center; color:#8a6258; font-size:.88rem; border-top:1px solid var(--line); }
+    @media print { nav, .hero-video { display:none; } .hero { padding:25px; background:#fff; color:#000; } .teacher { color:#000; background:#fff; border:1px solid #999; } }
   </style>
 </head>
 <body>
