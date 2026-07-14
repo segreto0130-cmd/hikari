@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="『私の光』を聴き、感じ、表現するための学習ページです。">
+  <title>私の光｜音楽の学びページ</title>
+  <style>
+    :root { --ink:#203140; --blue:#0d6477; --sky:#eaf7f7; --sun:#f7c850; --paper:#fffdf7; --line:#d8e5e4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.8; }
+    a { color:var(--blue); }
+    .hero { padding:76px 20px 58px; text-align:center; color:white; background:radial-gradient(circle at 50% 5%,#fff3b8 0 6%,transparent 25%),linear-gradient(135deg,#0d6477,#338fa0); }
+    .eyebrow { display:inline-block; padding:4px 14px; border:1px solid rgba(255,255,255,.6); border-radius:999px; font-size:.88rem; letter-spacing:.08em; }
+    h1 { margin:14px 0 8px; font-size:clamp(2.3rem,7vw,4.5rem); letter-spacing:.12em; line-height:1.25; }
+    .lead { max-width:630px; margin:0 auto; font-size:1.08rem; }
+    nav { position:sticky; top:0; z-index:2; display:flex; gap:4px; justify-content:center; flex-wrap:wrap; padding:10px; background:rgba(255,253,247,.95); border-bottom:1px solid var(--line); backdrop-filter:blur(8px); }
+    nav a { padding:4px 10px; text-decoration:none; font-size:.92rem; }
+    main { max-width:980px; padding:0 20px 60px; margin:auto; }
+    section { padding:56px 0 4px; }
+    h2 { font-size:clamp(1.55rem,4vw,2.2rem); line-height:1.4; margin:0 0 18px; }
+    h2::before { content:""; display:inline-block; width:12px; height:12px; margin-right:10px; border-radius:50%; background:var(--sun); }
+    .intro { max-width:720px; font-size:1.06rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px; }
+    .card { padding:23px; background:white; border:1px solid var(--line); border-radius:16px; box-shadow:0 5px 16px rgba(13,100,119,.06); }
+    .card h3 { margin:0 0 8px; font-size:1.12rem; }
+    .number { display:inline-grid; place-items:center; width:29px; height:29px; margin-right:6px; color:white; background:var(--blue); border-radius:50%; font-size:.85rem; }
+    .question { padding:24px; background:var(--sky); border-radius:16px; }
+    .question p { margin:.3em 0; }
+    .teacher { padding:28px; color:#fff; background:#254d61; border-radius:18px; }
+    .teacher h2 { margin-top:0; }
+    .teacher h2::before { background:var(--sun); }
+    .teacher a { color:#fff3b8; }
+    details { margin:12px 0; padding:0 17px; color:var(--ink); background:white; border-radius:10px; }
+    summary { padding:13px 2px; cursor:pointer; font-weight:bold; }
+    details p, details ul { padding-bottom:12px; }
+    .note { padding:18px 20px; border-left:5px solid var(--sun); background:#fff7dc; }
+    footer { padding:30px 20px; text-align:center; color:#48606b; font-size:.88rem; border-top:1px solid var(--line); }
+    @media print { nav { display:none; } .hero { padding:25px; background:#fff; color:#000; } .teacher { color:#000; background:#fff; border:1px solid #999; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <span class="eyebrow">音楽の学びページ</span>
+    <h1>私の光</h1>
+    <p class="lead">聴いて、感じて、あなたらしい「光」を見つけよう。</p>
+  </header>
+  <nav aria-label="ページ内メニュー">
+    <a href="#listen">聴いてみよう</a><a href="#think">考えてみよう</a><a href="#sing">表現しよう</a><a href="#teacher">先生へ</a>
+  </nav>
+  <main>
+    <section aria-labelledby="about">
+      <h2 id="about">この曲と出会う</h2>
+      <p class="intro">「私の光」は、一人ひとりの心にある思いや願いに目を向ける曲です。曲を聴いたときに浮かんだ色、景色、気持ちを大切にしてみましょう。感じ方に正解はありません。</p>
+      <div class="note">このページでは、歌詞や楽譜を掲載していません。授業でお使いの楽譜・音源とあわせてご利用ください。</div>
+    </section>
+    <section id="listen" aria-labelledby="listen-title">
+      <h2 id="listen-title">聴いてみよう</h2>
+      <div class="cards">
+        <article class="card"><h3><span class="number">1</span>はじめの音</h3><p>曲の始まりは、どんな空気に感じますか。静かさ、期待、やさしさなど、思いつく言葉を書いてみよう。</p></article>
+        <article class="card"><h3><span class="number">2</span>音の変化</h3><p>音が大きくなるところ、小さくなるところを見つけよう。気持ちはどのように変わるでしょう。</p></article>
+        <article class="card"><h3><span class="number">3</span>心に残る場面</h3><p>いちばん心に残ったところはどこですか。その理由を、色や絵で表してもすてきです。</p></article>
+      </div>
+    </section>
+    <section id="think" aria-labelledby="think-title">
+      <h2 id="think-title">考えてみよう</h2>
+      <div class="question">
+        <p>「光」という言葉から、あなたは何を思いうかべますか？</p>
+        <p>だれかを元気にする「光」には、どんなものがあるでしょう？</p>
+        <p>この曲を歌うとき、どんなことを伝えたいですか？</p>
+      </div>
+    </section>
+    <section id="sing" aria-labelledby="sing-title">
+      <h2 id="sing-title">表現しよう</h2>
+      <div class="cards">
+        <article class="card"><h3>声の色を選ぶ</h3><p>やわらかい声、まっすぐな声、のびやかな声。場面に合う声を、友だちと相談して探してみよう。</p></article>
+        <article class="card"><h3>息をそろえる</h3><p>歌い出す前に、全員で静かに息を吸ってみましょう。声だけでなく、気持ちもそろいやすくなります。</p></article>
+        <article class="card"><h3>最後に届ける</h3><p>歌い終わった後に残したい気持ちを考えよう。聴いている人へ、どんな「光」を届けたいですか。</p></article>
+      </div>
+    </section>
+    <section id="teacher" class="teacher" aria-labelledby="teacher-title">
+      <h2 id="teacher-title">先生へ：授業づくりのヒント</h2>
+      <details><summary>45分の進め方（例）</summary><p>導入5分：曲名からイメージを出す。鑑賞10分：1回目は自由に聴く。共有10分：感じたことを言葉・色・絵で交換する。表現15分：歌い方を試す。ふり返り5分：自分が見つけた「光」を書く。</p></details>
+      <details><summary>発問の例</summary><ul><li>この曲のどこから、そう感じましたか？</li><li>声や音の大きさを変えると、伝わり方はどう変わりますか？</li><li>友だちの感じ方で、なるほどと思ったことはありますか？</li></ul></details>
+      <details><summary>評価の見取り</summary><p>「音楽から感じたことを自分の言葉で表しているか」「曲想に合う表現を試しているか」「仲間の考えを聴き、表現に生かそうとしているか」を中心に見取ります。</p></details>
+    </section>
+    <section aria-labelledby="rights-title">
+      <h2 id="rights-title">掲載するときのお願い</h2>
+      <p>歌詞、楽譜、音源、動画、児童の写真や作品を公開する場合は、それぞれの権利者・保護者の許可を確認してください。公開用には、必要な素材だけを掲載し、個人情報は載せないようにしましょう。</p>
+    </section>
+  </main>
+  <footer>© 2026 私の光　音楽の学びページ</footer>
+</body>
+</html>
