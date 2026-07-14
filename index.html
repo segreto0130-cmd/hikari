@@ -11,7 +11,11 @@
     html { scroll-behavior:smooth; }
     body { margin:0; color:var(--ink); background:var(--paper); font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif; line-height:1.8; }
     a { color:var(--blue); }
-    .hero { padding:76px 20px 58px; text-align:center; color:white; background:radial-gradient(circle at 50% 5%,#fff3b8 0 6%,transparent 25%),linear-gradient(135deg,#0d6477,#338fa0); }
+    .hero { position:relative; isolation:isolate; min-height:355px; display:grid; place-items:center; overflow:hidden; padding:76px 20px 58px; text-align:center; color:white; background:#0d6477; }
+    .hero::after { content:""; position:absolute; inset:0; z-index:-1; background:radial-gradient(circle at 50% 5%,rgba(255,243,184,.65) 0 6%,transparent 25%),linear-gradient(135deg,rgba(7,72,87,.76),rgba(20,127,143,.68)); }
+    .hero-video { position:absolute; inset:0; z-index:-2; overflow:hidden; opacity:.33; pointer-events:none; }
+    .hero-video iframe { position:absolute; top:50%; left:50%; width:177.78vh; min-width:100%; height:56.25vw; min-height:100%; border:0; transform:translate(-50%,-50%) scale(1.08); }
+    .hero-content { position:relative; }
     .eyebrow { display:inline-block; padding:4px 14px; border:1px solid rgba(255,255,255,.6); border-radius:999px; font-size:.88rem; letter-spacing:.08em; }
     h1 { margin:14px 0 8px; font-size:clamp(2.3rem,7vw,4.5rem); letter-spacing:.12em; line-height:1.25; }
     .lead { max-width:630px; margin:0 auto; font-size:1.08rem; }
@@ -36,18 +40,26 @@
     summary { padding:13px 2px; cursor:pointer; font-weight:bold; }
     details p, details ul { padding-bottom:12px; }
     .note { padding:18px 20px; border-left:5px solid var(--sun); background:#fff7dc; }
+    .download { display:inline-block; padding:12px 20px; color:white; background:var(--blue); border-radius:999px; text-decoration:none; font-weight:bold; }
+    .download:hover { background:#084c5b; }
+    .small { font-size:.92rem; }
     footer { padding:30px 20px; text-align:center; color:#48606b; font-size:.88rem; border-top:1px solid var(--line); }
     @media print { nav { display:none; } .hero { padding:25px; background:#fff; color:#000; } .teacher { color:#000; background:#fff; border:1px solid #999; } }
   </style>
 </head>
 <body>
   <header class="hero">
-    <span class="eyebrow">音楽の学びページ</span>
-    <h1>私の光</h1>
-    <p class="lead">聴いて、感じて、あなたらしい「光」を見つけよう。</p>
+    <div class="hero-video" aria-hidden="true">
+      <iframe src="https://www.youtube-nocookie.com/embed/R_Gwv94ErVM?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=R_Gwv94ErVM&amp;controls=0&amp;playsinline=1&amp;rel=0" title="合唱曲ひかりの動画"></iframe>
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow">音楽の学びページ</span>
+      <h1>私の光</h1>
+      <p class="lead">聴いて、感じて、あなたらしい「光」を見つけよう。</p>
+    </div>
   </header>
   <nav aria-label="ページ内メニュー">
-    <a href="#listen">聴いてみよう</a><a href="#think">考えてみよう</a><a href="#sing">表現しよう</a><a href="#teacher">先生へ</a>
+    <a href="#listen">聴いてみよう</a><a href="#lyrics">歌詞を味わう</a><a href="#sing">表現しよう</a><a href="#teacher">先生へ</a><a href="#worksheet">ワークシート</a>
   </nav>
   <main>
     <section aria-labelledby="about">
@@ -71,6 +83,15 @@
         <p>この曲を歌うとき、どんなことを伝えたいですか？</p>
       </div>
     </section>
+    <section id="lyrics" aria-labelledby="lyrics-title">
+      <h2 id="lyrics-title">歌詞を味わう</h2>
+      <p class="intro">この曲は、身の回りの光を見つめることから始まり、支えてくれる大切な存在を感じ、最後には「自分の中にも光がある」と受け取っていく歌です。「あなた」を一人に決めないからこそ、家族、友だち、先生など、それぞれが自分の経験を重ねられます。</p>
+      <div class="cards">
+        <article class="card"><h3>身近な景色から</h3><p>木漏れ日、空、海などの景色を思い浮かべながら、音楽の明るさや広がりを感じてみましょう。</p></article>
+        <article class="card"><h3>だれかから受け取る</h3><p>自分を大切にしてくれた人、励ましてくれた人を思い浮かべると、言葉が自分のものになります。</p></article>
+        <article class="card"><h3>自分の光へ</h3><p>明るい時だけでなく、迷いや涙のある時にも見つけられる光。その思いが最後の表現につながります。</p></article>
+      </div>
+    </section>
     <section id="sing" aria-labelledby="sing-title">
       <h2 id="sing-title">表現しよう</h2>
       <div class="cards">
@@ -84,6 +105,26 @@
       <details><summary>45分の進め方（例）</summary><p>導入5分：曲名からイメージを出す。鑑賞10分：1回目は自由に聴く。共有10分：感じたことを言葉・色・絵で交換する。表現15分：歌い方を試す。ふり返り5分：自分が見つけた「光」を書く。</p></details>
       <details><summary>発問の例</summary><ul><li>この曲のどこから、そう感じましたか？</li><li>声や音の大きさを変えると、伝わり方はどう変わりますか？</li><li>友だちの感じ方で、なるほどと思ったことはありますか？</li></ul></details>
       <details><summary>評価の見取り</summary><p>「音楽から感じたことを自分の言葉で表しているか」「曲想に合う表現を試しているか」「仲間の考えを聴き、表現に生かそうとしているか」を中心に見取ります。</p></details>
+    </section>
+    <section aria-labelledby="tips-title">
+      <h2 id="tips-title">ひとこと指導のコツ</h2>
+      <div class="cards">
+        <article class="card"><h3>「うまれてきた」</h3><p>自分が生まれたとき、どんな人がそばにいてくれたかな、と問いかけてから歌い始めましょう。</p></article>
+        <article class="card"><h3>「こもれび」</h3><p>強い光ではなく、やわらかく、きらきらした声を探してみましょう。</p></article>
+        <article class="card"><h3>「あなた」</h3><p>誰のことか答えを決めず、一人ひとりの思いを大切にしましょう。</p></article>
+        <article class="card"><h3>「あおいそら」「あおいうみ」</h3><p>空の高さと海の深さを、声の広がりや響きの違いで表してみましょう。</p></article>
+        <article class="card"><h3>「なみだ」</h3><p>悲しい涙だけでなく、うれしい涙や感謝の涙もあることを話してみましょう。</p></article>
+        <article class="card"><h3>「にじいろ」</h3><p>色を思い浮かべると、声にも自然に明るさやあたたかさが生まれます。</p></article>
+        <article class="card"><h3>「くらやみ」</h3><p>光の大切さに気づくための言葉として扱いましょう。</p></article>
+        <article class="card"><h3>「ラ」の声部</h3><p>主旋律を包む光のように、前へ出すぎず、軽く響かせましょう。</p></article>
+        <article class="card"><h3>「わたしのひかり」</h3><p>受け取った光が自分の光になる場面です。自信を持って、でも押しつけずに歌いましょう。</p></article>
+      </div>
+    </section>
+    <section id="worksheet" aria-labelledby="worksheet-title">
+      <h2 id="worksheet-title">授業ですぐ使えるワークシート</h2>
+      <p>歌詞から自分の「ひかり」を考え、次に歌うときの目標を書き込めるA4・1枚のワークシートです。ダウンロードして、そのまま印刷できます。</p>
+      <a class="download" href="hikari-worksheet.pdf" download>ワークシートPDFをダウンロード</a>
+      <p class="small">PDFが開けない場合は、リンクを右クリックして保存してください。</p>
     </section>
     <section aria-labelledby="rights-title">
       <h2 id="rights-title">掲載するときのお願い</h2>
